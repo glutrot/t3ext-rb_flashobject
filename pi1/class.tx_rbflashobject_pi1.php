@@ -28,7 +28,9 @@
  */
 
 
-require_once(PATH_tslib."class.tslib_pibase.php");
+if (!class_exists('tslib_pibase')) {
+    require_once(PATH_tslib."class.tslib_pibase.php");
+}
 
 class tx_rbflashobject_pi1 extends tslib_pibase {
 	var $prefixId = "tx_rbflashobject_pi1";		// Same as class name
